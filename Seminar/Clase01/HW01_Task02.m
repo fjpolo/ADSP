@@ -28,14 +28,16 @@ clc;
 %           Signals generation
 %--------------------------------------------------------------------------
 
+% Frecuencies
 f=100;
-T =1*(1/f);
 Fs = f/0.1;
-%Fn=f/Fs=0.1;
+
+%Time
+T =1*(1/f);
 dt = 1/Fs;
 t = 0:dt:2*T;
 
-%Full range Triangle wave
+%Full range Triangular wave
 x1 = sawtooth(2*pi*f*t,0.5);
 figure(1)
 set(gcf, 'name', 'Waves')
@@ -43,7 +45,7 @@ subplot (5,1,1),
 plot(t,x1)
 title('Full range Triangle wave')
 
-%20db under full range triangle wave
+%20db under full range Triangular wave
 x2 = 0.1*sawtooth(2*pi*f*t, 0.5);
 figure(1)
 subplot (5,1,2),
@@ -81,8 +83,6 @@ title('Audio signal')
 %SNR for under range signal is going to be 70dB (90-20)	
 
 
-
-
 %--------------------------------------------------------------------------
 %           Homework assignment 2/3
 %           Quantization and reconstruction
@@ -97,7 +97,7 @@ q = (1-(-1))/(2^6);
 %-------------------------------------------------------------------------------
 
 %quantized full range triangle wave
-xq1a = floor (x1/q);
+xq1a = floor (x1/q)
 
 %decodified signal
 x1a = xq1a*q;

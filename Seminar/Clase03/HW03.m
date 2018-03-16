@@ -81,6 +81,7 @@ freqz(speechUP_FIR)
 %speechDOWN_FIR= downsample (speechUP_FIR,4);
 %sound(speechDOWN_FIR)
 %pause(7);
+
 %*******************************************************************************
 % 3. IIR lowpass filter
 %*******************************************************************************
@@ -113,6 +114,7 @@ freqz(speechUP_IIR)
 %speechDOWN_IIR= downsample (speechUP_IIR,4);
 %sound(speechDOWN_IIR)
 %pause(7);
+
 %*******************************************************************************
 % 4.  Downsample the speech signal
 %*******************************************************************************

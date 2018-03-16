@@ -28,14 +28,16 @@ clc;
 %           Signals generation
 %--------------------------------------------------------------------------
 
+% Frecuencies
 f=100;
-T =1*(1/f);
 Fs = f/0.1;
-%Fn=f/Fs=0.1;
+
+%Time
+T =1*(1/f);
 dt = 1/Fs;
 t = 0:dt:2*T;
 
-%Full range Triangle wave
+%Full range Triangular wave
 x1 = sawtooth(2*pi*f*t,0.5);
 figure(1)
 set(gcf, 'name', 'Waves')
@@ -43,7 +45,7 @@ subplot (5,1,1),
 plot(t,x1)
 title('Full range Triangle wave')
 
-%20db under full range triangle wave
+%20db under full range Triangular wave
 x2 = 0.1*sawtooth(2*pi*f*t, 0.5);
 figure(1)
 subplot (5,1,2),

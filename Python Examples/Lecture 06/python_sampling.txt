@@ -1,0 +1,10 @@
+Python real time audio example: This
+example takes the microphone input and
+samples it, without removing the zeros, and
+plays it back the the speaker in real time.
+It constructs a unit pulse train, with a 1 at
+every N'th sample, using the modulus
+function „%“,
+s=(np.arange(0,CHUNK)%N)==0
+Start it with:
+python pyrecplay_samplingblock.py
